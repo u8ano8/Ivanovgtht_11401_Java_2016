@@ -1,0 +1,1 @@
+<h1 style="text-align: center">Вы являетесь администратором BookStore</h1>
