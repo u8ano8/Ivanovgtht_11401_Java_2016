@@ -75,7 +75,7 @@ public class MyUserDetail implements UserDetails {
      */
     @Override
     public boolean isEnabled() {
-        return usersInfo.getActive();
+        return true;
     }
 
     public UsersInfo getUserInfo() {

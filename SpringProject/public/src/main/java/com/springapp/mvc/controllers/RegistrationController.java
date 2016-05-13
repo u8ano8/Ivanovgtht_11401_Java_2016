@@ -2,7 +2,6 @@ package com.springapp.mvc.controllers;
 
 import com.springapp.mvc.aspects.annotation.IncludeMenuInfo;
 import com.springapp.mvc.form.RegistrationFormBean;
-import com.springapp.mvc.mail.Sender;
 import mvc.common.UsersInfo;
 import mvc.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,10 +70,7 @@ public class RegistrationController {
         userService.add(new UsersInfo(regBean.getEmail(),md5Decoder(regBean.getPassword()),
                 regBean.getEmail(),regBean.getFirstName()+" "+regBean.getLastName(),"ROLE_USER"));
         Long user_id = userService.getByLogin(regBean.getEmail()).getId();
-        Sender sender = new Sender("andrewivanov83@gmail.com","chochoybabay94624");
-        sender.send("REGISTRATION","Вы прошли успешную регистрацию на сайте bookStore\n" +
-                "Для подтверждения регистрации пройдте по ссылке : http://localhost:8082/reg/activate?id="+ user_id + "\n" +
-                "Ваш логин : "+regBean.getEmail(),"andrewivanov83@gmail.com",regBean.getEmail());
+
 
         System.out.println(regBean);
         return "redirect:/";

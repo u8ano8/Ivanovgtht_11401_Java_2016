@@ -5,11 +5,7 @@
     <artifactId>SpringProject</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>public</module>
-        <module>core</module>
-        <module>MailSender</module>
-    </modules>
+
     <name>SpringProject</name>
 
     <profiles>
