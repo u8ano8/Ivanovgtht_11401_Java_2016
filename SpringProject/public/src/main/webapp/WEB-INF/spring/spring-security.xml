@@ -44,7 +44,7 @@
     <!--<authentication-manager>-->
         <!--<authentication-provider>-->
             <!--<user-service>-->
-                <!--<user name="ramil" password="lox" authorities="ROLE_USER"/>-->
+                <!--<user name="ооо" password="ооорр" authorities="ROLE_USER"/>-->
             <!--</user-service>-->
         <!--</authentication-provider>-->
 

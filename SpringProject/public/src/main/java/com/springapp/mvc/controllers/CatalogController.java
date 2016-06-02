@@ -22,12 +22,12 @@ public class CatalogController {
     @Autowired
     private CatalogService catalogService;
 
-    /**
-     * Отображение каталога
-     *
-     * @param id    id категории
-     * @return отображение каталога
-     */
+    /*
+    Отображение каталога
+
+    @param id    id категории
+    @return отображение каталога
+    */
     @IncludeMenuInfo
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String renderCatalog(@PathVariable("id") Long id,

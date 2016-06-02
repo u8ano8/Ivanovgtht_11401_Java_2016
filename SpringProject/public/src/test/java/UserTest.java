@@ -13,32 +13,32 @@ public class UserTest {
 
     @Before
     public void setUp(){
-        UsersInfo user = new UsersInfo("ramilmmk@gmail.com","13523523twe","ramilmmk@gmail.com","Ramil","ROLE_ADMIN");
+        UsersInfo user = new UsersInfo("andrewivanov97@mail.ru","123456","andrewivanov97@mail.ru","Andrew","ROLE_ADMIN");
         service = mock(UserService.class);
-        when(service.getByLogin("ramilmmk@gmail.com")).thenReturn(user);
+        when(service.getByLogin("andrewivanov97@mail.ru")).thenReturn(user);
     }
 
     @Test
     public void usernameTest(){
-        UsersInfo user = service.getByLogin("ramilmmk@gmail.com");
-        Assert.assertEquals("ramilmmk@gmail.com",user.getLogin());
+        UsersInfo user = service.getByLogin("andrewivanov97@mail.ru");
+        Assert.assertEquals("andrewivanov97@mail.ru",user.getLogin());
     }
 
     @Test
     public void emailTest(){
-        UsersInfo user = service.getByLogin("ramilmmk@gmail.com");
-        Assert.assertEquals("ramilmmk@gmail.com",user.getEmail());
+        UsersInfo user = service.getByLogin("andrewivanov97@mail.ru");
+        Assert.assertEquals("andrewivanov97@mail.ru",user.getEmail());
     }
 
     @Test
     public void nameTest(){
-        UsersInfo user = service.getByLogin("ramilmmk@gmail.com");
-        Assert.assertEquals("Ramil",user.getName());
+        UsersInfo user = service.getByLogin("andrewivanov97@mail.ru");
+        Assert.assertEquals("Andrew",user.getName());
     }
 
     @Test
     public void roleTest(){
-        UsersInfo user = service.getByLogin("ramilmmk@gmail.com");
+        UsersInfo user = service.getByLogin("andrewivanov97@mail.ru");
         Assert.assertEquals("ROLE_ADMIN",user.getRole());
     }
 
